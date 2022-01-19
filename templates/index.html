@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Stroke</title>
+  </head>
+  <body>
+     
+      <br>
+   <div style="color:rgb(199, 201, 202)">
+    <form action="{{ url_for('predict')}}" method="post">
+
+    <div class="text-center">
+        <img src="static\Stroke.jpeg" alt="stroke image" style="width:300px;height:300px;">
+      </div>
+    
+    <br>
+    <div class="text-center"><h1>Stroke Prediction System</h1></div>
+    <br>
+    
+    <div class="container">
+      <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="age_box" class="form-control" id="age" size="3" name="age" required="required">
+      </div>
+
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="gender" name="gender_male">
+                <option selected>---Select Gender---</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select><br>
+            
+            <label for="hypertension" class="form-label">Do you have high blood pressure?</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="hypertension" name="hypertension_yes">
+                <option selected>---Select Option---</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select><br>
+              <label for="heart_disease" class="form-label">Do you have any heart disease?</label>
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="heart_disease" name="heart_disease_yes">
+                  <option selected>---Select Option---</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select><br>
+                <label for="married" class="form-label">Are you married?</label>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="married" name="married_yes">
+                    <option selected>---Select Option---</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select><br>
+                  <label for="work" class="form-label">What is your work type?</label>
+                  <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="work" name="work_type_govt_job">
+                      <option selected>---Select Option---</option>
+                      <option value="Govt_job">Goverment Job</option>
+                      <option value="private">Private Job</option>
+                      <option value="self_employed">Self Employed</option>
+                      <option value="children">Student</option>
+                      <option value="never_worked">Never Worked</option>
+                    </select><br>
+                    <label for="reside" class="form-label">Resident</label>
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="reside" name="reside_rural">
+                        <option selected>---Select Option---</option>
+                        <option value="rural">Rural</option>
+                        <option value="urban">Urban</option>
+                      </select><br>
+                      <div class="mb-3">
+                        <label for="glucose" class="form-label">Glucose Level</label>
+                        <input type="glucose_box" class="form-control" id="glucose" size="3" name="glucose" required="required">
+                      </div>
+                      <div class="mb-3">
+                        <label for="bmi" class="form-label">Boday Mass Index</label>
+                        <input type="bmi_box" class="form-control" id="bmi" name="bmi" required="required" >
+                      </div>
+                      <label for="smoke" class="form-label">Smoking</label>
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="smoke" name="smoke_smoked">
+                          <option selected>---Select Option---</option>
+                          <option value="smoked">Smoked</option>
+                          <option value="never_smoked">Never Smoked</option>
+                        </select><br>  
+           <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Submit</button>
+           
+          </form>
+          </div>
+          
+          
+    
+          </div>
+          
+  
+    <style>
+      body {
+          background-color: rgb(41, 11, 75);
+          text-align: center;
+          padding: 0px;
+      }
+
+      
+
+      </style>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+  </body>
+</html>
